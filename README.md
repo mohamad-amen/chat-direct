@@ -1,22 +1,22 @@
-# Chat Direct
+<p align="center">
+  <img src="assets/chat direct icon.png" height=100 alt="Chat Direct logo" />
+</p>
 
-This flutter project was built to help me and my friends open WhatsApp chats directly without the need to save phone numbers you want to chat with. and we find it pretty useful! 
+<h1 align="center">
+Chat Direct
+</h1>
 
-The application is currently only available in Arabic.
+Chat Direct was built to help me and my friends opening WhatsApp chats directly without saving phone numbers you want to chat with. and we find it pretty useful! 
 
-## Features & How it works
-- selecting country code from the dialogue
-- phone code data are loaded from a JSON file in the ```/assets``` folder
-- The selected country code will be saved locally using Hive and loaded whenever you open the app
-- when you fill code field the app will search among phone codes, if there is only one similar result it will select it automatically
-- pressing the final button "ابدأ المحادثة" will launch ```wa.me``` URL with the phone code + number
+It is currently only available in Arabic.
+
+## Features
+- Selecting country code from the dialogue
+- The selected country code will be saved locally using `Hive`
+- Filling country code field automaticaly sellects it if it's correct
+- Pressing the final button "ابدأ المحادثة" will launch ```wa.me``` URL with the phone code + number
 
 ## Screenshots
 
-<img src="github%20assets/screenshot%201.png" width="400" /> <img src="github%20assets/screenshot%202.png" width="400" />
-<img src="github%20assets/screenshot%203.png" width="400" /> <img src="github%20assets/screenshot%204.png" width="400" /> 
-
-
-## APK file
-[Chat Direct.apk](https://github.com/mohamed-amen/Chat-Direct/raw/refs/heads/master/github%20assets/Chat%20Direct.apk)
-
+<img src="github assets/screenshot 1.png" width="49%" /> <img src="github assets/screenshot 2.png" width="49%" />
+<img src="github assets/screenshot 3.png" width="49%" /> <img src="github assets/screenshot 4.png" width="49%" /> 
