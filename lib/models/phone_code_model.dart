@@ -15,21 +15,21 @@ class PhoneCodeModel {
 
   factory PhoneCodeModel.fromMap(Map data) {
     return PhoneCodeModel._(
-      englishName: data['name'],
-      arabicName: data['ar_name'],
-      countryCode: data['country_code'],
-      flag: data['emoji'],
-      phoneCode: data['phone_code'],
+      englishName: data["name"],
+      arabicName: data["ar_name"],
+      countryCode: data["country_code"],
+      flag: data["emoji"],
+      phoneCode: data["phone_code"],
     );
   }
 
   Map toMap() {
     return {
-      'name': englishName,
-      'ar_name': arabicName,
-      'country_code': countryCode,
-      'emoji': flag,
-      'phone_code': phoneCode,
+      "name": englishName,
+      "ar_name": arabicName,
+      "country_code": countryCode,
+      "emoji": flag,
+      "phone_code": phoneCode,
     };
   }
 }

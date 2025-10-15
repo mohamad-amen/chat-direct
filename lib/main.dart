@@ -1,8 +1,8 @@
-import 'package:chat_direct/constants/constants.dart';
-import 'package:chat_direct/providers/phone_code_provider.dart';
-import 'package:chat_direct/screens/main_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import "package:chat_direct/constants/constants.dart";
+import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:chat_direct/screens/main_screen.dart";
+import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       create: (context) => PhoneCodeProvider(),
       child: MaterialApp(
         theme: Constants.textFieldTheme,
-        title: 'Chat Direct',
+        title: "Chat Direct",
         home: const Directionality(
           textDirection: TextDirection.rtl,
           child: MainScreen(),

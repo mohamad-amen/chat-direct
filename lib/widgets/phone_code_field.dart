@@ -1,8 +1,8 @@
-import 'package:chat_direct/constants/constants.dart';
-import 'package:chat_direct/models/phone_code_model.dart';
-import 'package:chat_direct/providers/phone_code_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import "package:chat_direct/constants/constants.dart";
+import "package:chat_direct/models/phone_code_model.dart";
+import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 
 class PhoneCodeField extends StatefulWidget {
   const PhoneCodeField({super.key, required this.fieldNode, required this.fieldController});
@@ -71,7 +71,7 @@ class _PhoneCodeFieldState extends State<PhoneCodeField> {
         maxLength: 5,
         decoration: InputDecoration(
           labelText: "رمز الدولة",
-          counterText: '',
+          counterText: "",
           floatingLabelAlignment: FloatingLabelAlignment.center,
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Constants.grey!),

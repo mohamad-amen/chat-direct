@@ -1,7 +1,7 @@
-import 'package:chat_direct/models/phone_code_model.dart';
-import 'package:chat_direct/providers/phone_code_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import "package:chat_direct/models/phone_code_model.dart";
+import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 
 class PhoneCodeListWidget extends StatelessWidget {
   const PhoneCodeListWidget({super.key, required this.phoneCode});

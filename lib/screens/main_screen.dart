@@ -1,19 +1,19 @@
-import 'dart:developer';
+import "dart:developer";
 
-import 'package:chat_direct/constants/constants.dart';
-import 'package:chat_direct/data/local_data.dart';
-import 'package:chat_direct/models/phone_code_model.dart';
-import 'package:chat_direct/providers/phone_code_provider.dart';
-import 'package:chat_direct/widgets/phone_code_button.dart';
-import 'package:chat_direct/widgets/phone_code_field.dart';
-import 'package:chat_direct/widgets/phone_number_field.dart';
-import 'package:chat_direct/widgets/top_bar.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
+import "package:chat_direct/constants/constants.dart";
+import "package:chat_direct/data/local_data.dart";
+import "package:chat_direct/models/phone_code_model.dart";
+import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:chat_direct/widgets/phone_code_button.dart";
+import "package:chat_direct/widgets/phone_code_field.dart";
+import "package:chat_direct/widgets/phone_number_field.dart";
+import "package:chat_direct/widgets/top_bar.dart";
+import "package:flutter/material.dart";
+import "package:flutter/services.dart";
+import "package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart";
+import "package:fluttertoast/fluttertoast.dart";
+import "package:provider/provider.dart";
+import "package:url_launcher/url_launcher.dart";
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -31,8 +31,8 @@ class _MainScreenState extends State<MainScreen> {
 
   void gotoWhatsapp() {
     Uri uri = Uri(
-      scheme: 'https',
-      host: 'wa.me',
+      scheme: "https",
+      host: "wa.me",
       path: phoneNumber(),
     );
 
@@ -47,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
     String phoneNumber = phoneNumberController.text;
 
     if (phoneCodeProvider.selectedPhoneCode != null) {
-      String phoneCode = phoneCodeProvider.selectedPhoneCode!.phoneCode.replaceAll('+', "");
+      String phoneCode = phoneCodeProvider.selectedPhoneCode!.phoneCode.replaceAll("+", "");
       return phoneCode + phoneNumber;
     }
 

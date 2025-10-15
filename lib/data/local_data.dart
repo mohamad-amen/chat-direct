@@ -1,7 +1,7 @@
-import 'dart:developer';
+import "dart:developer";
 
-import 'package:chat_direct/models/phone_code_model.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import "package:chat_direct/models/phone_code_model.dart";
+import "package:hive_flutter/hive_flutter.dart";
 
 class LocalData {
   static Box? _hiveBox;

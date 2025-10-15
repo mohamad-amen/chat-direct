@@ -1,6 +1,6 @@
-import 'package:chat_direct/constants/constants.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import "package:chat_direct/constants/constants.dart";
+import "package:flutter/material.dart";
+import "package:flutter_svg/svg.dart";
 
 class TopBar extends StatelessWidget {
   const TopBar({super.key});
@@ -21,7 +21,7 @@ class TopBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: SvgPicture.asset(
-                'assets/whatsapp.svg',
+                "assets/whatsapp.svg",
                 colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               ),
             ),
