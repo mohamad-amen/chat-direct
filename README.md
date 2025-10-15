@@ -18,5 +18,5 @@ It is currently only available in Arabic.
 
 ## Screenshots
 
-<img src="github assets/screenshot 1.png" width="49%" /> <img src="github assets/screenshot 2.png" width="49%" />
-<img src="github assets/screenshot 3.png" width="49%" /> <img src="github assets/screenshot 4.png" width="49%" /> 
+<img src="assets/screenshots//screenshot 1.png" width="49%" /> <img src="assets/screenshots/screenshot 2.png" width="49%" />
+<img src="assets/screenshots/screenshot 3.png" width="49%" /> <img src="assets/screenshots/screenshot 4.png" width="49%" /> 
