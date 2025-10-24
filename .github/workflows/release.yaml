@@ -1,0 +1,63 @@
+name: Build and Release APKs 
+run-name: ${{ github.ref_name }} Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Trigger on version tags like v1.0.0
+
+jobs:
+
+  build-apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable' # use latest stable flutter version
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Accept Android licenses
+        run: yes | flutter doctor --android-licenses
+
+      - name: Run Flutter doctor
+        run: flutter doctor -v
+
+      - name: Build fat APK
+        run: flutter build apk --release
+
+      - name: Build ABI specific APKs
+        run: flutter build apk --release --split-per-abi
+
+      - name: Upload APK files to artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk files
+          path: | 
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+            build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+            build/app/outputs/flutter-apk/app-x86_64-release.apk
+
+      - name: Upload APK files to GitHub Releases
+        uses: softprops/action-gh-release@v2 # this action only works with tags, otherwise run will fail
+        with:
+          name: ${{ github.ref_name }} 
+          tag_name: ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+            build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+            build/app/outputs/flutter-apk/app-x86_64-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this token is automatically created by GitHub, no need to add it to secrets
