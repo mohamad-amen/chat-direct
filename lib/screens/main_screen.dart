@@ -140,7 +140,7 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 20),
