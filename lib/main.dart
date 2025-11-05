@@ -1,6 +1,6 @@
-import "package:chat_direct/constants/constants.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
 import "package:chat_direct/screens/main_screen.dart";
+import "package:chat_direct/theme/app_theme.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 
@@ -21,7 +21,8 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(
       create: (context) => PhoneCodeProvider(),
       child: MaterialApp(
-        theme: Constants.textFieldTheme,
+        theme: AppTheme.themeData,
+        themeMode: AppTheme.themeMode,
         title: "Chat Direct",
         home: const Directionality(
           textDirection: TextDirection.rtl,
