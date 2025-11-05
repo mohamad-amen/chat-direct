@@ -1,6 +1,6 @@
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
-import "package:chat_direct/theme/theme.dart";
+import "package:chat_direct/theme/app_theme.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 
@@ -30,14 +30,14 @@ class _PhoneCodeFieldState extends State<PhoneCodeField> {
 
   void setLabelColor() {
     if (phoneCodeProvider.selectedPhoneCode == null && widget.fieldController.text != "") {
-      labelColor = AppTheme.error;
+      labelColor = AppTheme.colorPalette.error;
       return;
     }
 
     if (widget.fieldNode.hasFocus) {
-      labelColor = AppTheme.primary;
+      labelColor = AppTheme.colorPalette.primary;
     } else {
-      labelColor = AppTheme.border;
+      labelColor = AppTheme.colorPalette.border;
     }
   }
 

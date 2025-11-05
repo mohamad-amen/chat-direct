@@ -1,6 +1,6 @@
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
-import "package:chat_direct/theme/theme.dart";
+import "package:chat_direct/theme/app_theme.dart";
 import "package:chat_direct/widgets/phone_code_list_widget.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
@@ -56,10 +56,10 @@ class _PhoneCodeDialogueState extends State<PhoneCodeDialogue> {
                   prefixIcon: Icon(Icons.search),
                   floatingLabelAlignment: FloatingLabelAlignment.center,
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: AppTheme.border),
+                    borderSide: BorderSide(color: AppTheme.colorPalette.border),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: AppTheme.primary),
+                    borderSide: BorderSide(color: AppTheme.colorPalette.primary),
                   ),
                 ),
                 onChanged: (value) => onSearchTextChanged(value.toLowerCase()),

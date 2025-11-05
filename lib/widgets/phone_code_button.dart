@@ -1,6 +1,6 @@
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
-import "package:chat_direct/theme/theme.dart";
+import "package:chat_direct/theme/app_theme.dart";
 import "package:chat_direct/widgets/phone_code_dialogue.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
@@ -44,7 +44,7 @@ class _PhoneCodeButtonState extends State<PhoneCodeButton> {
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
-              side: BorderSide(color: AppTheme.border),
+              side: BorderSide(color: AppTheme.colorPalette.border),
             ),
           ),
           textStyle: WidgetStateProperty.all(
@@ -67,11 +67,11 @@ class _PhoneCodeButtonState extends State<PhoneCodeButton> {
                     children: [
                       Text(
                         selectedPhoneCode.englishName,
-                        style: const TextStyle(fontSize: 17),
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Text(
                         selectedPhoneCode.arabicName,
-                        style: const TextStyle(fontSize: 17),
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ],
                   ),

@@ -1,4 +1,4 @@
-import "package:chat_direct/theme/theme.dart";
+import "package:chat_direct/theme/app_theme.dart";
 import "package:flutter/material.dart";
 import "package:flutter_svg/svg.dart";
 
@@ -16,7 +16,7 @@ class TopBar extends StatelessWidget {
         child: Container(
           height: 90,
           width: double.infinity,
-          color: AppTheme.primary,
+          color: AppTheme.colorPalette.primary,
           child: SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(8.0),

@@ -1,4 +1,4 @@
-import "package:chat_direct/theme/theme.dart";
+import "package:chat_direct/theme/app_theme.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 
@@ -26,7 +26,7 @@ class PhoneNumberField extends StatelessWidget {
         counterText: "",
         floatingLabelAlignment: FloatingLabelAlignment.center,
         labelStyle: TextStyle(
-          color: fieldNode.hasFocus ? AppTheme.primary : AppTheme.border,
+          color: fieldNode.hasFocus ? AppTheme.colorPalette.primary : AppTheme.colorPalette.border,
         ),
       ),
     );
