@@ -26,7 +26,7 @@ class PhoneCodeListWidget extends StatelessWidget {
         subtitle: Text(phoneCode.arabicName),
         trailing: Text(
           phoneCode.phoneCode,
-          style: const TextStyle(fontSize: 15, color: Colors.black),
+          style: const TextStyle(fontSize: 15),
         ),
       ),
     );

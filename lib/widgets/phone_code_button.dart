@@ -1,6 +1,6 @@
-import "package:chat_direct/constants/constants.dart";
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:chat_direct/theme/theme.dart";
 import "package:chat_direct/widgets/phone_code_dialogue.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
@@ -41,21 +41,18 @@ class _PhoneCodeButtonState extends State<PhoneCodeButton> {
           );
         },
         style: ButtonStyle(
-            shape: WidgetStateProperty.all(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
-                side: BorderSide(color: Constants.grey!),
-              ),
+          shape: WidgetStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+              side: BorderSide(color: AppTheme.border),
             ),
-            textStyle: WidgetStateProperty.all(
-              const TextStyle(
-                fontSize: 15,
-              ),
+          ),
+          textStyle: WidgetStateProperty.all(
+            const TextStyle(
+              fontSize: 15,
             ),
-            backgroundColor: WidgetStateProperty.all(
-              Constants.darkerGreen,
-            ),
-            foregroundColor: WidgetStateProperty.all(Colors.white)),
+          ),
+        ),
         child: selectedPhoneCode == null
             ? const Text("إختر رمز الدولة")
             : Row(

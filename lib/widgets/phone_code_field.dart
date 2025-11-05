@@ -1,6 +1,6 @@
-import "package:chat_direct/constants/constants.dart";
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:chat_direct/theme/theme.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 
@@ -30,14 +30,14 @@ class _PhoneCodeFieldState extends State<PhoneCodeField> {
 
   void setLabelColor() {
     if (phoneCodeProvider.selectedPhoneCode == null && widget.fieldController.text != "") {
-      labelColor = Constants.red;
+      labelColor = AppTheme.error;
       return;
     }
 
     if (widget.fieldNode.hasFocus) {
-      labelColor = Constants.green;
+      labelColor = AppTheme.primary;
     } else {
-      labelColor = Constants.grey;
+      labelColor = AppTheme.border;
     }
   }
 
@@ -73,21 +73,8 @@ class _PhoneCodeFieldState extends State<PhoneCodeField> {
           labelText: "رمز الدولة",
           counterText: "",
           floatingLabelAlignment: FloatingLabelAlignment.center,
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Constants.grey!),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Constants.red!),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Constants.red!),
-          ),
           labelStyle: TextStyle(
             color: labelColor,
-          ),
-          helperStyle: TextStyle(color: Constants.grey),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Constants.green),
           ),
         ),
         style: const TextStyle(color: Colors.white),

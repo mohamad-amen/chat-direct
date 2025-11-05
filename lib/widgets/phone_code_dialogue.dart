@@ -1,6 +1,6 @@
-import "package:chat_direct/constants/constants.dart";
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:chat_direct/theme/theme.dart";
 import "package:chat_direct/widgets/phone_code_list_widget.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
@@ -47,13 +47,21 @@ class _PhoneCodeDialogueState extends State<PhoneCodeDialogue> {
         resizeToAvoidBottomInset: true,
         body: Card(
           clipBehavior: Clip.hardEdge,
-          color: Constants.grey,
           child: Column(
             children: [
               const SizedBox(height: 5),
               TextField(
                 controller: searchFieldController,
-                decoration: Constants.searchBarDecoration,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  floatingLabelAlignment: FloatingLabelAlignment.center,
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: AppTheme.border),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: AppTheme.primary),
+                  ),
+                ),
                 onChanged: (value) => onSearchTextChanged(value.toLowerCase()),
               ),
               const SizedBox(height: 5),

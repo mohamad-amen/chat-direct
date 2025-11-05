@@ -1,9 +1,9 @@
 import "dart:developer";
 
-import "package:chat_direct/constants/constants.dart";
 import "package:chat_direct/data/local_data.dart";
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:chat_direct/theme/theme.dart";
 import "package:chat_direct/widgets/phone_code_button.dart";
 import "package:chat_direct/widgets/phone_code_field.dart";
 import "package:chat_direct/widgets/phone_number_field.dart";
@@ -59,7 +59,7 @@ class _MainScreenState extends State<MainScreen> {
 
     Fluttertoast.showToast(
       msg: "تم نسخ رابط المحادثة",
-      backgroundColor: Constants.grey,
+      backgroundColor: AppTheme.lightBackground,
       textColor: Colors.black,
     );
   }
@@ -108,7 +108,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.darkGrey,
       body: CustomScrollView(
         slivers: [
           const TopBar(),
@@ -144,8 +143,6 @@ class _MainScreenState extends State<MainScreen> {
                   const SizedBox(height: 50),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Constants.darkerGreen,
-                      foregroundColor: Colors.white,
                       textStyle: const TextStyle(fontSize: 20),
                     ),
                     onPressed: gotoWhatsapp,
