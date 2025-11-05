@@ -40,7 +40,7 @@ class AppTheme {
       selectionHandleColor: primary,
     ),
     inputDecorationTheme: InputDecorationTheme(
-      prefixIconColor: border,
+      prefixIconColor: secondaryText,
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: AppTheme.border),
       ),
