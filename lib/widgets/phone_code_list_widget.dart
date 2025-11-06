@@ -1,5 +1,6 @@
 import "package:chat_direct/models/phone_code_model.dart";
 import "package:chat_direct/providers/phone_code_provider.dart";
+import "package:country_flags/country_flags.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 
@@ -18,9 +19,13 @@ class PhoneCodeListWidget extends StatelessWidget {
         Navigator.pop(context);
       },
       child: ListTile(
-        leading: Text(
-          phoneCode.flag,
-          style: const TextStyle(fontSize: 25),
+        leading: CountryFlag.fromCountryCode(
+          phoneCode.countryCode,
+          theme: ImageTheme(
+            shape: RoundedRectangle(5),
+            height: 30,
+            width: 40,
+          ),
         ),
         title: Text(phoneCode.englishName),
         subtitle: Text(phoneCode.arabicName),
